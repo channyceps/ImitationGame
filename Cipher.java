@@ -39,6 +39,7 @@ public class Cipher
            }
            
        }
-       return s;
+       String newstring = s.substring(1,s.length()) + s.substring(0,1);
+       return newstring;
     }   
 }

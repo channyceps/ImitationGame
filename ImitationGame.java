@@ -9,7 +9,7 @@ public class ImitationGame
 {
     public static void main(String args[])
     {
-        Cipher nick = new Cipher("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+        Cipher nick = new Cipher("abyzABYZ");
         System.out.println(nick.encrypt());
         
         String decryptthis = nick.encrypt();

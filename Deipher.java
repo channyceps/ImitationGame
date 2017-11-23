@@ -23,7 +23,18 @@ public class Deipher
            int ascii1 = (int) character;
            int ascii2 = ascii1 - 1;
            char newcharacter = (char)ascii2;
-           if (ascii2 < (int)('z') + 1)
+           if (((ascii2 <= (int)('z') + 1) && (ascii2 >= 96)))
+           {
+               if (newcharacter == (char)96)
+               {
+                   s += 'z';
+               }
+               else
+               {
+                   s+= newcharacter;
+               }
+           }
+           if (((ascii2 <= (int)('Z') +1) && (ascii2 >= (int)('A') -1)))
            {
                if (newcharacter == '@')
                {
@@ -31,14 +42,11 @@ public class Deipher
                }
                else
                {
-                   s += newcharacter;
+                   s+= newcharacter;
                }
            }
-           if (ascii2 == (int)('a'))
-           {
-               s+= 'z';
-           }
        }
-       return s;
+       String newstring = s.substring(s.length()-1,s.length()) + s.substring(0,s.length()-1);
+       return newstring;
     }   
 }
